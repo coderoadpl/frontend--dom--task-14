@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form
+        action="/"
+        class="contact-form"
+    >
+
+        <input
+            type="text"
+            class="contact-form__input"
+            required
+        />
+
+        <button class="contact-form__submit-button">
+            SUBMIT
+        </button>
+
+    </form>
+
+    <script>
+
+        const contactForm = document.querySelector('.contact-form')
+
+        function submitHandler(event) {
+            event.preventDefault()
+
+            const input = document.querySelector('.contact-form__input')
+            const value = input.value
+
+            console.log(value)
+        }
+
+        contactForm.addEventListener(
+            'submit',
+            submitHandler
+        )
+
+    </script>
+
+</body>
+
+</html>
